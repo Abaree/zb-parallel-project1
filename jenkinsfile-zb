@@ -3,7 +3,7 @@ pipeline{
 		stages{
 			stage('1-git clone'){
 				steps{
-					checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Abaree/zb-parallel-project.git']]])
+				   checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Abaree/zb-parallel-project1.git']]])
 					stage('2-parallel build stage'){
 						parallel{
 							stage('3-sub-build1'){
